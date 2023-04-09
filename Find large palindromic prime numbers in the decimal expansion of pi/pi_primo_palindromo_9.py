@@ -23,8 +23,8 @@ print('Desafio: [1º primo palíndromo de 9 digitos na expansão do π].com')
 print('Premio: R$ 10.000,00')
 
 while False == primo_palindromo:
-    d_0 = 128992
-    # d_0 = 1
+    # d_0 = 128992
+    d_0 = 1
     if n == 0:
         d_start = d_0 + n*batch_digits
     else:
