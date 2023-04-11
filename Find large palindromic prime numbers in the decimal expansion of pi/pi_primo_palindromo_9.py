@@ -30,8 +30,8 @@ while False == primo_palindromo:
     else:
         d_start = d_0 + n*batch_digits - n_digits
     print(50 * '#')
-    print(f'Tempo decorrido do loop, com lote de {batch_digits} dígitos: {round((time.time() - t_loop)/60,1)}min')
-    print(f'N-ésimo dígito, primeiro do lote {n+1}º lote: {d_start}')
+    print(f'Tempo decorrido do loop, com lote de {batch_digits} dígitos: {round((time.time() - t_loop),1)}s')
+    print(f'N-ésimo dígito, primeiro do {n+1}º lote: {d_start}')
     print((50 * '#'),'\n')
     # Pegar os dígitos da expansão de π (https://pi.delivery/#apipi_get) - 100 trilhões de dígitos:
     url = f'https://api.pi.delivery/v1/pi?start={d_start}&numberOfDigits={batch_digits}'
@@ -67,8 +67,8 @@ while False == primo_palindromo:
                     pi_9_primo_palindromo = pi_9
                     primo_palindromo = True
                     tf_palin = time.time()
-                    temp_palin = np.array(round((tf_palin - ti_palin)/60,1))
-                    print(f'O tempo de verificação do palíndromo primo de {n_digits} dígitos foi de {temp_palin}min', end='')
+                    temp_palin = np.array(round((tf_palin - ti_palin),2))
+                    print(f'O tempo de verificação do palíndromo primo de {n_digits} dígitos foi de {temp_palin}s', end='')
                     break
             else:
                 pass
