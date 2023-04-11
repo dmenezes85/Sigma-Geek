@@ -52,12 +52,12 @@ while False == primo_palindromo:
             pi_9_reversed = pi_9[::-1]
             ti_palin = time.time()
             
-            # Verificar se o número é um palíndromo:
-            if pi_9 == pi_9_reversed:
-                print(f"\nOs 9 dígitos {pi_9} da expansão de π é um palíndromo")
+            # Verificar se o número é um palíndromo e possível primo:
+            if pi_9 == pi_9_reversed and pi_9[-1] in ['1', '3', '7', '9']:
+                print(f"\nOs 9 dígitos {pi_9} da expansão de π é um palíndromo e possível primo")
                 print('Verificando se é número primo... ')
                 
-                for x in range(2,int(pi_9)):
+                for x in range(3, int(np.sqrt(int(pi_9))) + 1):
                     if (int(pi_9) % x) == 0:
                         print(f"O número {pi_9} não é primo")
                         break
