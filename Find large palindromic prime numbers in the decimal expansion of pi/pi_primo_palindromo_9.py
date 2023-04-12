@@ -34,6 +34,7 @@ while False == primo_palindromo:
     print(f'N-ésimo dígito, primeiro do {n+1}º lote: {d_start}')
     print((50 * '#'),'\n')
     # Pegar os dígitos da expansão de π (https://pi.delivery/#apipi_get) - 100 trilhões de dígitos:
+    # https://cloud.google.com/blog/products/compute/calculating-100-trillion-digits-of-pi-on-google-cloud
     url = f'https://api.pi.delivery/v1/pi?start={d_start}&numberOfDigits={batch_digits}'
     resposta = requests.get(url)
     print(50 * '#')
